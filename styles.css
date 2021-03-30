@@ -1,0 +1,121 @@
+html {
+  background: yellow;
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  background-color: lightgray;
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+
+  /* account for the height of the clock hands */
+}
+
+.clock-face .number {
+  --rotation: 0deg;
+
+  position: absolute;
+  font-size: 26px;
+  width: 100%;
+  height: 100%;
+  transform: rotate(var(--rotation));
+  text-align: center;
+}
+
+.clock-face .number1 {
+  --rotation: 30deg;
+}
+
+.clock-face .number2 {
+  --rotation: 60deg;
+}
+
+.clock-face .number3 {
+  --rotation: 90deg;
+}
+
+.clock-face .number4 {
+  --rotation: 120deg;
+}
+
+.clock-face .number5 {
+  --rotation: 150deg;
+}
+
+.clock-face .number6 {
+  --rotation: 180deg;
+}
+
+.clock-face .number7 {
+  --rotation: 210deg;
+}
+
+.clock-face .number8 {
+  --rotation: 240deg;
+}
+
+.clock-face .number9 {
+  --rotation: 270deg;
+}
+
+.clock-face .number10 {
+  --rotation: 300deg;
+}
+
+.clock-face .number11 {
+  --rotation: 330deg;
+}
+
+.clock-face .number12 {
+  --rotation: 360deg;
+}
+
+.clock-face .hand {
+  background: black;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transform-origin: bottom;
+  z-index: 10;
+}
+
+.hand.hour-hand {
+  width: 5px;
+  height: 30%;
+}
+
+.hand.min-hand {
+  width: 4px;
+  height: 45%;
+}
+
+.hand.second-hand {
+  background-color: red;
+  width: 3px;
+  height: 48%;
+}
